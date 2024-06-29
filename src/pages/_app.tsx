@@ -1,3 +1,4 @@
+import '../styles/globals.css';
 import { UserProvider } from '../context/user-context';
 
 const MyApp = ({ Component, pageProps }) => {
