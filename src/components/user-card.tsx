@@ -1,15 +1,16 @@
-import React from 'react';
 import Link from 'next/link';
+import type { User } from '../types/user';
 
-export const UserCard = ({ user }) => (
-  <div className='border p-4 rounded-lg grid grid-cols-3'>
-    <h2>{user.username}</h2>
-    <p>XP: {user.xp}</p>
-    <Link
-      href={`/user/${user.address}`}
-      className='text-blue-500'
-    >
-      View Details
+interface UserCardProps {
+  user: User;
+}
+
+export const UserCard = ({ user }: UserCardProps) => (
+  <div className='border p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200'>
+    <h2 className='text-xl font-semibold mb-2'>{user.username}</h2>
+    <p className='text-gray-700 mb-4'>XP: {user.xp}</p>
+    <Link href={`/user/${user.address}`}>
+      <span className='text-blue-500 hover:underline'>View Details</span>
     </Link>
   </div>
 );

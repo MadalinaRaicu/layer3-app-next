@@ -1,4 +1,3 @@
-import React from 'react';
 import { UserProvider } from '../context/user-context';
 
 const MyApp = ({ Component, pageProps }) => {
