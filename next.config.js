@@ -1,6 +1,10 @@
-const { createProxyMiddleware } = require('http-proxy-middleware');
+const path = require('node:path');
 
 module.exports = {
+  webpack: (config, options) => {
+    config.resolve.modules.push(path.resolve('./src'));
+    return config;
+  },
   async rewrites() {
     return [
       {
