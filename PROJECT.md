@@ -7,7 +7,8 @@
 3. Create a `.env.local` file and add your Etherscan API key:
 
     ```bash
-    NEXT_PUBLIC_ETHERSCAN_API_KEY=your_api_key
+    ETHERSCAN_API_KEY=your_api_key
+    OPENSEA_API_KEY=your_api_key
     ```
 
 4. Run the development server: `npm run dev` or `yarn dev`.

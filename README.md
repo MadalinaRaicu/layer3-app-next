@@ -1,6 +1,6 @@
 # Layer3 Leaderboard App
 
-## Preview 
+## Preview
 
 <img width="1644" alt="Screenshot 2024-06-30 at 16 34 33" src="https://github.com/MadalinaRaicu/layer3-app-next/assets/16125548/7cf42383-f753-48e8-8346-e03e07220878">
 <img width="1678" alt="Screenshot 2024-06-30 at 16 30 28" src="https://github.com/MadalinaRaicu/layer3-app-next/assets/16125548/87ef3662-69b4-49e8-ba20-89eb14e34507">
@@ -8,7 +8,7 @@
 <img width="1680" alt="Screenshot 2024-06-30 at 16 36 09" src="https://github.com/MadalinaRaicu/layer3-app-next/assets/16125548/f0cf092f-4590-4e66-b7d5-30f8aa5167ec">
 
 
-## Tech stack 
+## Tech stack
 
 * React
 * NextJs
@@ -22,7 +22,8 @@
 3. Create a `.env.local` file and add your Etherscan API key:
 
     ```bash
-    NEXT_PUBLIC_ETHERSCAN_API_KEY=your_api_key
+    ETHERSCAN_API_KEY=your_api_key
+    OPENSEA_API_KEY=your_api_key
     ```
 
 4. Run the development server: `npm run dev` or `yarn dev`.
