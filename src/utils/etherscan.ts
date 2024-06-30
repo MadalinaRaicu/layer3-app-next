@@ -33,9 +33,8 @@ export const fetchUserNFTs = async (address: string) => {
         console.log('opensea data:', data)
 
         const nfts = data.nfts?.map((asset) => ({
-            tokenId: asset.token_id,
             name: asset.name || asset.description,
-            imageUrl: asset.opensea_url,
+            imageUrl: asset.display_image_url,
             description: asset.description,
         }));
 
