@@ -2,19 +2,17 @@
 
 ## Preview 
 
-<img width="1644" alt="Screenshot 2024-06-30 at 16 34 33" src="https://github.com/MadalinaRaicu/layer3-app-next/assets/16125548/7cf42383-f753-48e8-8346-e03e07220878">
-<img width="1678" alt="Screenshot 2024-06-30 at 16 30 28" src="https://github.com/MadalinaRaicu/layer3-app-next/assets/16125548/87ef3662-69b4-49e8-ba20-89eb14e34507">
-<img width="1680" alt="Screenshot 2024-06-30 at 16 34 52" src="https://github.com/MadalinaRaicu/layer3-app-next/assets/16125548/abe8a36d-8b97-4338-be6d-148f3c314b42">
-<img width="1680" alt="Screenshot 2024-06-30 at 16 36 09" src="https://github.com/MadalinaRaicu/layer3-app-next/assets/16125548/f0cf092f-4590-4e66-b7d5-30f8aa5167ec">
-
+<img width="1401" alt="Screenshot 2024-06-30 at 17 43 34" src="https://github.com/MadalinaRaicu/layer3-app-next/assets/16125548/7a8a7c63-b237-4817-a42b-79f0633e3e40">
+<img width="1396" alt="Screenshot 2024-06-30 at 17 43 57" src="https://github.com/MadalinaRaicu/layer3-app-next/assets/16125548/c7bca85d-1b55-4318-9152-36f930b90dbd">
+<img width="1395" alt="Screenshot 2024-06-30 at 17 44 54" src="https://github.com/MadalinaRaicu/layer3-app-next/assets/16125548/5a9dbbe0-a00c-419f-b925-65dafcabfa1c">
 
 ## Tech stack 
 
 * React
 * NextJs
 * Ethercan API
-* Opensea
-
+* Opensea API
+  
 ## Getting Started
 
 1. Clone the repository.
