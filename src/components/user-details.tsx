@@ -44,16 +44,33 @@ export const UserDetails = ({ user }: UserDetailsProps) => {
   if (error)
     return <div className='text-center text-red-500'>Error: {error}</div>;
 
-  console.log({ balance, transactions, nfts });
+  console.log({ nfts });
 
   return (
     <div className='p-4'>
       <h1 className='text-2xl font-bold mb-4'>{user.username}</h1>
       <p className='text-gray-700 mb-4'>XP: {user.xp}</p>
-      <div className='mb-6'>
-        <h2 className='text-xl font-semibold mb-2'>Balance</h2>
-        <p className='text-gray-700'>{balance} ETH</p>
-      </div>
+      {balance && (
+        <div className='mb-6'>
+          <h2 className='text-xl font-semibold mb-2'>Balance</h2>
+          <p className='text-gray-700'>{balance} ETH</p>
+        </div>
+      )}
+      {nfts && (
+        <div className='mb-6'>
+          <h2 className='text-xl font-semibold mb-2'>NFTs</h2>
+          <ul className='list-disc pl-5'>
+            {nfts.map((nft: NFT) => (
+              <li
+                key={nft.tokenId}
+                className='text-gray-700'
+              >
+                {nft.name}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       <div className='mb-6'>
         <h2 className='text-xl font-semibold mb-2'>Latest Transactions</h2>
         <ul className='list-disc pl-5'>
@@ -63,19 +80,6 @@ export const UserDetails = ({ user }: UserDetailsProps) => {
               className='text-gray-700'
             >
               {tx.hash} - {tx.value} ETH
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        <h2 className='text-xl font-semibold mb-2'>NFTs</h2>
-        <ul className='list-disc pl-5'>
-          {nfts.map((nft: NFT) => (
-            <li
-              key={nft.tokenId}
-              className='text-gray-700'
-            >
-              {nft.name}
             </li>
           ))}
         </ul>
