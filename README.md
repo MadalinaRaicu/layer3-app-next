@@ -12,19 +12,12 @@
 * NextJs
 * Ethercan API
 * Opensea API
-  
+
 ## Getting Started
 
 1. Clone the repository.
 2. Install dependencies: `npm install` or `yarn`.
-3. Create a `.env.local` file and add your Etherscan API key:
-
-    ```bash
-    ETHERSCAN_API_KEY=your_api_key
-    OPENSEA_API_KEY=your_api_key
-    ```
-
-4. Run the development server: `npm run dev` or `yarn dev`.
+3. Run the development server: `npm run dev` or `yarn dev`.
 
 ## Features
 
