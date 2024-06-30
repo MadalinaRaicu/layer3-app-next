@@ -10,7 +10,7 @@
 
 * React
 * NextJs
-* Ethercan API
+* Etherscan API
 * Opensea API
 
 ## Getting Started
