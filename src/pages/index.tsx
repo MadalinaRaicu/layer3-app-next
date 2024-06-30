@@ -15,7 +15,7 @@ const HomePage = () => {
   );
 
   return (
-    <div className='container mx-auto p-4'>
+    <div className='container mx-auto p-4 flex flex-col gap-6 lg:gap-12'>
       <h1 className='text-3xl font-bold mb-6 text-center'>
         Layer3 Leaderboard
       </h1>

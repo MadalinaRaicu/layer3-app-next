@@ -7,13 +7,15 @@ interface UserCardProps {
 }
 
 export const UserCard = ({ user, place }: UserCardProps) => (
-  <div className='border p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200'>
-    <h2 className='text-xl font-semibold mb-2'>
-      #{place} {user.username}
-    </h2>
-    <p className='text-gray-300 mb-4'>XP: {user.xp}</p>
-    <Link href={`/user/${user.address}`}>
-      <span className='text-blue-500 hover:underline'>View Details</span>
-    </Link>
-  </div>
+  <Link href={`/user/${user.address}`}>
+    <div className='card group text-center'>
+      <h2 className='text-xl font-semibold mb-2'>
+        #{place} {user.username}
+      </h2>
+      <p className='text-gray-300 mb-4'>XP: {user.xp}</p>
+      <span className='text-blue-500 group-hover:underline underline-offset-4'>
+        View Details
+      </span>
+    </div>
+  </Link>
 );
