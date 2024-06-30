@@ -7,8 +7,8 @@ const UserPage = () => {
   const { id } = router.query;
   const { users, loading, error } = useUsers();
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  if (loading) return <div className='mt-6'>Loading...</div>;
+  if (error) return <div className='mt-6'>Error: {error}</div>;
 
   const user = users.find((user) => user.address === id);
 

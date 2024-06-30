@@ -16,7 +16,9 @@ const HomePage = () => {
 
   return (
     <div className='container mx-auto p-4'>
-      <h1 className='text-3xl font-bold mb-6 text-center'>Top Users</h1>
+      <h1 className='text-3xl font-bold mb-6 text-center'>
+        Layer3 Leaderboard
+      </h1>
       <input
         type='text'
         placeholder='Search users'
@@ -25,10 +27,11 @@ const HomePage = () => {
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-        {filteredUsers.map((user) => (
+        {filteredUsers.map((user, i) => (
           <UserCard
             key={user.address}
             user={user}
+            place={i + 1}
           />
         ))}
       </div>

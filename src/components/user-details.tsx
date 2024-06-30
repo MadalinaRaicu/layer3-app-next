@@ -41,9 +41,9 @@ export const UserDetails = ({ user }) => {
     fetchData();
   }, [user.address]);
 
-  if (loading) return <div className='text-center'>Loading...</div>;
+  if (loading) return <div className='text-center mt-6'>Loading...</div>;
   if (error)
-    return <div className='text-center text-red-500'>Error: {error}</div>;
+    return <div className='text-center text-red-500 mt-6'>Error: {error}</div>;
 
   return (
     <div className='p-4'>
