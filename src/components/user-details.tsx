@@ -3,6 +3,7 @@ import { fetchUserBalance, fetchUserTransactions } from '../utils/etherscan';
 import type { NFT, Transaction } from '../types';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { fetchUserNFTs } from '../utils/opensea';
+import Link from 'next/link';
 
 export const UserDetails = ({ user }) => {
   const [balance, setBalance] = useState<number | null>(null);
@@ -98,7 +99,7 @@ export const UserDetails = ({ user }) => {
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {nfts.map((nft, i) => (
                   <div
-                    key={i}
+                    key={`${nft.imageUrl}/${i}`}
                     className='card'
                   >
                     <img
@@ -127,6 +128,9 @@ export const UserDetails = ({ user }) => {
                       </th>
                       <th className='py-2 px-4 border-b border-gray-700 text-right'>
                         Value
+                      </th>
+                      <th className='py-2 px-4 border-b border-gray-700 text-right'>
+                        Etherscan
                       </th>
                     </tr>
                   </thead>
@@ -157,6 +161,17 @@ export const UserDetails = ({ user }) => {
                         </td>
                         <td className='py-2 px-4 border-b border-gray-700 text-right'>
                           {tx.value} ETH
+                        </td>
+                        <td className='py-2 px-4 border-b border-gray-700 text-right'>
+                          <Link
+                            href={`https://etherscan.io/tx/${tx.hash}`}
+                            target='_blank'
+                            rel='noreferrer'
+                          >
+                            <span className='text-blue-500 hover:text-blue-300'>
+                              View on Etherscan
+                            </span>
+                          </Link>
                         </td>
                       </tr>
                     ))}
